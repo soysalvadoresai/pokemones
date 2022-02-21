@@ -9,12 +9,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.pokemon.request.CreateUserRequest;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Entity
 @Data
+@AllArgsConstructor
 @Table(name = "users")
 public class Users {
 
@@ -34,4 +38,14 @@ public class Users {
 	private String username;
 	
 	private String teamName;
+
+	public Users(CreateUserRequest createUserRequest) {
+		this.nameTraineer = createUserRequest.getName_traineer();
+		this.rol = createUserRequest.getRol_id();
+		this.password = createUserRequest.getPassword();
+		this.username = createUserRequest.getUsername();
+		this.teamName = createUserRequest.getTeam_name();
+	}
+	
+	
 }
