@@ -9,13 +9,13 @@ import lombok.Setter;
 @Setter
 public class CreateUserRequest {
 	
-	private int rol_id;
+	private int rolId;
 	private String password;
 	private String username;
-	private String name_traineer;
-	private String team_name;
+	private String nameTraineer;
+	private String teamName;
 	
-	private String name_pokemon;
+	private String namePokemon;
 	private List<String> tipos;
 	
 }

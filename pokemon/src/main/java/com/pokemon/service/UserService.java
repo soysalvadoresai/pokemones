@@ -1,6 +1,6 @@
 package com.pokemon.service;
 
-import org.apache.catalina.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +9,7 @@ import com.pokemon.repository.RolesRepository;
 import com.pokemon.repository.TypesRepository;
 import com.pokemon.repository.UserRepository;
 import com.pokemon.request.CreateUserRequest;
+import com.pokemon.entity.User;
 
 @Service
 public class UserService {
@@ -28,7 +29,7 @@ public class UserService {
 	public User createUser (CreateUserRequest createUserRequest) {
 		User user = new User(createUserRequest);
 		
-		
+		return user;
 	}
 
 }
