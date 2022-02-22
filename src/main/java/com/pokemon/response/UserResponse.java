@@ -20,7 +20,9 @@ public class UserResponse {
 
 	private Long id;
 	private String nameTraineer;
-	private Long rol_id;
+	
+	
+	private Long rolId;
 	private String rol;
 	private String password;
 	
@@ -32,7 +34,7 @@ public class UserResponse {
 		this.id = user.getId();
 		this.nameTraineer = user.getNameTraineer();
 		this.rol = user.getRol().getRol();
-		this.rol_id = user.getRol().getId();
+		this.rolId = user.getRol().getId();
 		this.password = user.getPassword();
 		this.username = user.getUsername();
 		this.teamName = user.getTeamName();

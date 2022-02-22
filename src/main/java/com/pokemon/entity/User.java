@@ -39,10 +39,10 @@ public class User {
 	private String teamName;
 
 	public User(CreateUserRequest createUserRequest) {
-		this.nameTraineer = createUserRequest.getName_traineer();
+		this.nameTraineer = createUserRequest.getNameTraineer();
 		this.password = createUserRequest.getPassword();
 		this.username = createUserRequest.getUsername();
-		this.teamName = createUserRequest.getTeam_name();
+		this.teamName = createUserRequest.getTeamName();
 	}
 	
 	
