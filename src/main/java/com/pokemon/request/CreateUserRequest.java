@@ -14,10 +14,10 @@ public class CreateUserRequest {
 	private Rol rol;
 	private String password;
 	private String username;
-	private String name_traineer;
-	private String team_name;
+	private String nameTraineer;
+	private String teamName;
 	
-	private String name_pokemon;
+	private String namePokemon;
 	private List<String> tipos;
 	
 }
