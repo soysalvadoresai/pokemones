@@ -21,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "Pokemons")
-public class Pokemons {
+public class Pokemon {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,5 +34,5 @@ public class Pokemons {
 			  name = "pokemons_type", 
 			  joinColumns = @JoinColumn(name = "id_type"), 
 			  inverseJoinColumns = @JoinColumn(name = "id_pokemon"))
-	private List<Types> types;
+	private List<Type> types;
 }

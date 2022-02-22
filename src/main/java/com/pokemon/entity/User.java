@@ -20,25 +20,25 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @Table(name = "users")
-public class Users {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	
 	private String nameTraineer;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "rol_id")
-	private Roles rol;
+	private Rol rol;
+	
 	private String password;
 	
 	private String username;
 	
 	private String teamName;
 
-	public Users(CreateUserRequest createUserRequest) {
+	public User(CreateUserRequest createUserRequest) {
 		this.nameTraineer = createUserRequest.getName_traineer();
 		this.password = createUserRequest.getPassword();
 		this.username = createUserRequest.getUsername();

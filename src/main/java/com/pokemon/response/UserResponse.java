@@ -5,7 +5,7 @@ package com.pokemon.response;
 import javax.persistence.CascadeType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import com.pokemon.entity.Users;
+import com.pokemon.entity.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,7 +28,7 @@ public class UserResponse {
 	
 	private String teamName;
 
-	public UserResponse(Users user) {
+	public UserResponse(User user) {
 		this.id = user.getId();
 		this.nameTraineer = user.getNameTraineer();
 		this.rol = user.getRol().getRol();

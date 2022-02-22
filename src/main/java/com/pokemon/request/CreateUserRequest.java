@@ -2,7 +2,7 @@ package com.pokemon.request;
 
 import java.util.List;
 
-import com.pokemon.entity.Roles;
+import com.pokemon.entity.Rol;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class CreateUserRequest {
 	
-	private Roles rol;
+	private Rol rol;
 	private String password;
 	private String username;
 	private String name_traineer;
